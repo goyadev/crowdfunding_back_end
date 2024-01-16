@@ -1,8 +1,8 @@
 Crowdfunding Back End
-{{ Goya Zheng }}
+Goya Zheng
 ## Planning:
 ### ArtStarter
-{{ Crowdfunding for Creatives. A platform for artists, musicians and all creatives to fund projects and more. }}
+Crowdfunding for Creatives. A platform for artists, musicians and all creatives to fund projects and more.
 ### Intended Audience/User Stories
 {{ Who are your intended audience? How will they use the website? }}
 ### Front End Pages/Functionality
