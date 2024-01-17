@@ -2,7 +2,7 @@ from rest_framework import serializers
 from .models import Project, Pledge
 
 class PledgeSerializer(serializers.ModelSerializer):
-    owner = serializers.ReadOnlyField(source='owner.id')
+    supporter = serializers.ReadOnlyField(source='supporter.id')
 
     class Meta:
         model = Pledge
