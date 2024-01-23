@@ -19,6 +19,8 @@ COPY crowdfunding/ /code/
 ENV SECRET_KEY "NKvYAtJi1k6RYrLWB4SEWBoUc4oeZt6GwnaOuP5SQPoys0RWxl"
 RUN python manage.py collectstatic --noinput
 
+RUN chmod +x /code/run.sh
+
 EXPOSE 8000
 
 CMD ["/code/run.sh"]
