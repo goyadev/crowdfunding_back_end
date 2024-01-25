@@ -55,6 +55,7 @@ class ProjectDetail(APIView):
         try:
             project = Project.objects.get(pk=pk)
             self.check_object_permissions(self.request, project)
+            return project
         except Project.DoesNotExist:
             raise Http404
     
