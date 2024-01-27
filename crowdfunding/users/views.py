@@ -4,18 +4,38 @@ from rest_framework.response import Response
 from rest_framework import status
 from .models import CustomUser
 from .serializers import CustomUserSerializer
+from rest_framework import status, permissions
+from .permissions import IsOwnerOrReadOnly
 
 class CustomUserList(APIView):
+    permission_classes = [
+    permissions.IsAuthenticated
+    ] 
     def get(self, request):
         users = CustomUser.objects.all()
         serializer = CustomUserSerializer(users, many=True)
         return Response(serializer.data)
+    
+    # def post(self, request):
+    #     serializer = CustomUserSerializer(data=request.data)
+    #     if serializer.is_valid():
+    #         serializer.save()
+    #         return Response(serializer.data)
+    #     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
+# testing creating a class which is for creating a new user only
+class CreateCustomUser(APIView):
+    permission_classes = [
+    permissions.AllowAny
+    ] 
+
     def post(self, request):
         serializer = CustomUserSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
     
 class CustomUserDetail(APIView):
     def get_object(self, pk):
