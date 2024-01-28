@@ -16,7 +16,9 @@ https://crowdfunding-back-end-gz.fly.dev/
 
 ### Intended Audience/User Stories
 
-Crowdfunding for creatives. A platform for artists, musicians and creatives to raise fund for projects and more
+Crowdfunding for creatives. A platform for artists, musicians and creatives.
+
+Artstarter connects creatives to capital allowing their artistic endeavours to be brought to life.
 
 ### Insomnia Screenshots
 
@@ -26,11 +28,11 @@ Crowdfunding for creatives. A platform for artists, musicians and creatives to r
 
 ##### POST Method
 
-![POST method for project endpoint](images/POST-create-users.png)
+![POST method for project endpoint from Insomnia](images/POST-create-users.png)
 
 ##### Token Returned
 
-![Token returned](images/TOKEN-returned.png)
+![Token returned from Insomnia](images/TOKEN-returned.png)
 
 ### Instructions
 
@@ -47,6 +49,7 @@ Crowdfunding for creatives. A platform for artists, musicians and creatives to r
 ```
 
 3. Your user is now created!
+4. To check if the new user is on the user list, you will need to be logged in and go to \_.baseurl/users/
 
 ### Front End Pages/Functionality
 
@@ -79,4 +82,4 @@ TBA next phase
 
 ### DB Schema
 
-![Database schema](./relative/path/to/your/schema/image.png)
+![ERD for Artstarter DRF Project](images/Artstarter-ERD.png)
