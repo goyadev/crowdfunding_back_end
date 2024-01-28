@@ -73,8 +73,8 @@ TBA next phase
 | -------------------------- | ----------- | ----------------------------------------------------------------------- | -------------- | --------------------- | ----------------------------- |
 | \_.base_url/pledges/       | GET         | Returns all pledges for all projects                                    | pledge object  | 200                   | Authenticated/Unauthenticated |
 | \_.base_url/pledges/       | POST        | Post pledges for to project                                             | pledge object  | 201                   | Authenticated                 |
-| \_.base_url/create-users/  | POST        | Creates new users                                                       | user object    | 201                   | Authenticated                 |
-| \_.base_url/users/         | GET         | Shows users list                                                        | user object    | 201                   | Authenticated                 |
+| \_.base_url/create-users/  | POST        | Creates new users                                                       | user object    | 201                   | Unauthenticated/Autheticated  |
+| \_.base_url/users/         | GET         | Shows users list                                                        | user object    | 200                   | Authenticated                 |
 | \_.base_url/create-users/  | POST        | If a user already exists, error: "A user with that name already exists" | user object    | 400                   | Authenticated                 |
 | \_.base_url/projects/      | POST        | Creates a new project                                                   | project object | 200                   | Authenticated                 |
 | \_.base_url/projects/      | GET         | Returns all projects                                                    | project object | 200                   | Authenticated/Unauthenticated |
